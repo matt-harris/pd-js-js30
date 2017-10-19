@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scoped CSS Variables and JS</title>
+
+  <style>
+    /* Set root CSS variables */
+    :root {
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 0px;
+    }
+
+    /* Apply styles to the img */
+    .img {
+      padding: var(--spacing);
+      background-color: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    /* Apply style to highlight */
+    .hl {
+      color: var(--base);
+    }
+
+    /*
+      misc styles, nothing to do with CSS variables
+    */
+    body {
+      text-align: center;
+      background: #193549;
+      color: white;
+      font-family: 'helvetica neue', sans-serif;
+      font-weight: 100;
+      font-size: 32px;
+    }
+
+    .controls {
+      margin-bottom: 50px;
+    }
+
+    input {
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Update CSS Variables with <span class='hl'>JS</span></h1>
+
+  <div class="controls">
+    <label for="spacing">Spacing:</label>
+    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+    <label for="blur">Blur:</label>
+    <input id="blur" type="range" name="blur" min="0" max="25" value="0" data-sizing="px">
+
+    <label for="base">Base Color</label>
+    <input id="base" type="color" name="base" value="#ffc600">
+  </div>
+
+  <img class="img" src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+
+  <script>
+    // Grab node list of input controls.
+    const inputs = document.querySelectorAll('.controls input');
+
+    function handleUpdate() {
+      // Grab the sizing value from the data attribute or nothing if no sizing value.
+      const suffix = this.dataset.sizing || '';
+      // Update the CSS custom properties via 'setProperty'.
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    // Listen for 'change' in value on the input controls and call 'handleUpdate'.
+    // Also listen for 'mouseover' event on the input controls and call 'handleUpdate'.
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+  </script>
+
+</body>
+</html>
