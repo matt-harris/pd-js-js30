@@ -7,3 +7,4 @@
 - Day 2: [JavaScript & CSS Clock](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/02%20-%20JS%20and%20CSS%20Clock/index.html)
 - Day 3: [CSS Variables & updating with JS](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/03%20-%20CSS%20Variables/index.html)
 - Day 4: [Array Methods - Map, Filter, Sort & reduce](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/04%20-%20Array%20Cardio%20Day%201/index.html)
+- Day 5: [Flex Panel Gallery](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/05%20-%20Flex%20Panel%20Gallery/index.html)
