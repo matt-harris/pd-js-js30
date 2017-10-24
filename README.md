@@ -10,3 +10,4 @@
 - Day 5: [Flex Panel Gallery](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/05%20-%20Flex%20Panel%20Gallery/index.html)
 - Day 6: [Ajax Type Ahead](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/06%20-%20Type%20Ahead/index.html)
 - Day 7: [Array Cardio 2 - .some, .every, .find, .findIndex](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/07%20-%20Array%20Cardio%20Day%202/index.html)
+- Day 8: [Playing with HTML5 Canvas](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/08%20-%20Fun%20with%20HTML5%20Canvas/index.html)
