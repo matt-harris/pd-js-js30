@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Canvas</title>
+</head>
+<body>
+<canvas id="draw" width="800" height="800"></canvas>
+<script>
+  // Set some canvas defaults.
+  const canvas = document.querySelector('#draw');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  ctx.strokeStyle = '#bada55';
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  ctx.lineWidth = 50;
+
+  // Set variables.
+  let isDrawing = false;
+  let lastX = 0;
+  let lastY = 0;
+  let hue = 0;
+  let direction = true;
+
+  // Main draw function.
+  function draw(e) {
+    if(!isDrawing) return // Stops the function running when they are not moused down.
+    // Change the colour of the stoke by 1.
+    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+    ctx.beginPath();
+    // Start from.
+    ctx.moveTo(lastX, lastY);
+    // Go to.
+    ctx.lineTo(e.offsetX, e.offsetY);
+    // Draw stroke.
+    ctx.stroke();
+    // Destructuring an array. es6.
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+//    lastX = e.offsetX;
+//    lastY = e.offsetY;
+
+    // Increment the 'H'sl value by one. This gives us the changing colour as
+    // we draw ourm lines.
+    // When it gets to 360 reset value to 0 (red).
+    hue++;
+    if (hue >= 360) {
+      hue = 0;
+    }
+
+    // Increment or decrement line width by one (max is 50, min is 1) by
+    // changing the direction (true or false).
+    if (ctx.lineWidth >= 50 || ctx.lineWidth <= 1) {
+      direction = !direction;
+    }
+
+    // Reverse direction (true or false).
+    if (direction) {
+      ctx.lineWidth++;
+    } else {
+      ctx.lineWidth--;
+    }
+  }
+
+  // Add event listeners.
+  // When the mouse is down, set isDrawing variable to true and update
+  // lastX & lastY variables with position.
+  canvas.addEventListener('mousedown', (e) => {
+    isDrawing = true;
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+  });
+  // Draw the line.
+  canvas.addEventListener('mousemove', draw);
+  // Stop drawing.
+  canvas.addEventListener('mouseup', () => isDrawing = false);
+  canvas.addEventListener('mouseout', () => isDrawing = false);
+</script>
+
+<style>
+  html, body {
+    margin:0;
+  }
+</style>
+
+</body>
+</html>
