@@ -13,3 +13,4 @@
 - Day 8: [Playing with HTML5 Canvas](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/08%20-%20Fun%20with%20HTML5%20Canvas/index.html)
 - Day 9: [Dev Tools Tips & Tricks](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/09%20-%20Dev%20Tools%20Domination/index.html)
 - Day 10: [Hold shift and check checkboxes](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/index.html)
+- Day 11: [Build a custom video player](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/11%20-%20Custom%20Video%20Player/index.html)
