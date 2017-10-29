@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Sequence Detection</title>
+</head>
+<body>
+<p><em>Psst: Do you know the Konami code? Have a look at the JavaScript Console.</em></p>
+
+<script>
+  const pressed = [];
+  const secretCode = 'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter';
+  const secretCodeLength = 11;
+
+  window.addEventListener('keyup', (e) => {
+    pressed.push(e.key);
+    pressed.splice(-secretCodeLength - 1, pressed.length - secretCodeLength);
+    if (pressed.join('').includes(secretCode)) {
+      console.log('DING DING!! You have entered the KONAMI code :)')
+    }
+  });
+</script>
+</body>
+</html>
