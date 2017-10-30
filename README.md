@@ -15,3 +15,4 @@
 - Day 10: [Hold shift and check checkboxes](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/index.html)
 - Day 11: [Build a custom video player](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/11%20-%20Custom%20Video%20Player/index.html)
 - Day 12: [Key sequence detection - Konami code :)](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/12%20-%20Key%20Sequence%20Detection/index.html)
+- Day 13: [Slide in on scroll](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/13%20-%20Slide%20in%20on%20Scroll/index.html)
