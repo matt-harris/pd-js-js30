@@ -19,3 +19,4 @@
 - Day 14: [JS References VS Copying](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/14%20-%20JavaScript%20References%20VS%20Copying/index.html)
 - Day 15: [Local Storage](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/15%20-%20LocalStorage/index.html)
 - Day 16: [Mouse Move Shadow](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/16%20-%20Mouse%20Move%20Shadow/index.html)
+- Day 17: [Sorting without articles](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/17%20-%20Sort%20Without%20Articles/index.html)
