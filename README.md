@@ -20,3 +20,4 @@
 - Day 15: [Local Storage](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/15%20-%20LocalStorage/index.html)
 - Day 16: [Mouse Move Shadow](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/16%20-%20Mouse%20Move%20Shadow/index.html)
 - Day 17: [Sorting without articles](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/17%20-%20Sort%20Without%20Articles/index.html)
+- Day 18: [Adding up total video times with Reduce](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/18%20-%20Adding%20Up%20Times%20with%20Reduce/index.html)
