@@ -24,3 +24,4 @@
 - Day 19: [Webcam Fun :)](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/19%20-%20Webcam%20Fun/index.html)
 - Day 20: [Browser Speech recognition](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/20%20-%20Speech%20Detection/index.html)
 - Day 21: [Geolocation](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/21%20-%20Geolocation/index.html)
+- Day 22: [Follow along link highlighter](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/22%20-%20Follow%20Along%20Link%20Highlighter/index.html)
