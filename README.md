@@ -26,3 +26,4 @@
 - Day 21: [Geolocation](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/21%20-%20Geolocation/index.html)
 - Day 22: [Follow along link highlighter](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/22%20-%20Follow%20Along%20Link%20Highlighter/index.html)
 - Day 23: [Speech Synthesis](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/23%20-%20Speech%20Synthesis/index.html)
+- Day 24: [Sticky Nav](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/24%20-%20Sticky%20Nav/index.html)
