@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Understanding JavaScript's Capture</title>
+</head>
+<body class="bod">
+
+  <div class="one">
+    <div class="two">
+      <div class="three">
+      </div>
+    </div>
+  </div>
+
+<style>
+  html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after { box-sizing: inherit; }
+
+  div {
+    width: 100%;
+    padding: 100px;
+  }
+
+  .one {
+    background: thistle;
+  }
+
+  .two {
+    background: mistyrose;
+  }
+
+  .three {
+    background: coral;
+  }
+</style>
+
+<button>Button Text</button>
+
+<script>
+  const divs = document.querySelectorAll('div');
+
+  function logText(e) {
+    // Bubbling
+    // As it's wrapped withing tags you have also clicked on
+    // everything it is wrapped in...
+    // If you click on the 3rd div (coral).
+    // All three classes get logged.
+    // All three divs get logged
+    // We also clicked on 2nd div, 1st div, body, html, current tab, google chrome etc
+    // When you make a click it will ripple all the way up to the top of the document
+    // and trigger clicks on those elements.
+    // You won't necessarily see them as you are not listening for clicks on that element.
+    // How it works in JS.
+    // Capture - The browser first does a 'capture' and ripples down. Works top down.
+    // html > body > div.one > div.two > div.three
+    // The events haven't fired yet.
+    // Then it bubbles up and triggers events as we work up.
+    console.log(this.classList.value);
+    // Stop bubbling this event up.
+    //e.stopPropagation();
+    console.log(this);
+  }
+
+  //divs.forEach(div => div.addEventListener('click', logText));
+  // Pass third arguments > options> capture: true
+  // logText now gets run on the capture down rather than bubble up.
+  divs.forEach(div => div.addEventListener('click', logText, {
+    capture: false,
+    // New JS option, if you set it to true, it will listen for a click
+    // and then unbind itslef. Which is the same as
+    // div.removeEventListener('click', logText)
+    once: true
+  }));
+
+  // For example if you only wanted someone to click on the button once.
+  // e.g store checkouts.
+  const button  = document.querySelector('button');
+  button.addEventListener('click', () => {
+    console.log('Click!!!!!');
+  }, {
+    once: true
+  });
+
+</script>
+</body>
+</html>
