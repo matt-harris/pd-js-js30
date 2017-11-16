@@ -30,3 +30,4 @@
 - Day 25: [Event Capture, Propagation, Bubbling and Once](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/25%20-%20Event%20Capture%2C%20Propagation%2C%20Bubbling%20and%20Once/index.html)
 - Day 26: [Stripe Follow Along Nav](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/26%20-%20Stripe%20Follow%20Along%20Nav/index.html)
 - Day 27: [Click & Drag](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/27%20-%20Click%20and%20Drag/index.html)
+- Day 28: [Video Speed Controller](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/28%20-%20Video%20Speed%20Controller/index.html)
