@@ -31,3 +31,4 @@
 - Day 26: [Stripe Follow Along Nav](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/26%20-%20Stripe%20Follow%20Along%20Nav/index.html)
 - Day 27: [Click & Drag](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/27%20-%20Click%20and%20Drag/index.html)
 - Day 28: [Video Speed Controller](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/28%20-%20Video%20Speed%20Controller/index.html)
+- Day 29: [Countdown Timer](http://htmlpreview.github.io/?https://github.com/matt-harris/pd-js-js30/blob/master/29%20-%20Countdown%20Timer/index.html)
