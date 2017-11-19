@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Whack A Mole!</title>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Whack-a-mole! <span class="score">0</span></h1>
+  <button onClick="startGame()">Start!</button>
+
+  <div class="game">
+    <div class="hole hole1">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole2">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole3">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole4">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole5">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole6">
+      <div class="mole"></div>
+    </div>
+  </div>
+
+<script>
+  // Global variables.
+  const holes = document.querySelectorAll('.hole');
+  const scoreBoard = document.querySelector('.score');
+  const moles = document.querySelectorAll('.mole');
+  let lastHole;
+  let timeUp = false;
+  let score = 0;
+
+  // Return a random time.
+  function randomTime(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
+  // Return a random hole.
+  function randomHole(holes) {
+    const index = Math.floor(Math.random() * holes.length);
+    const hole = holes[index];
+    // If its the same hole as the last, try again!
+    if (hole === lastHole) {
+      console.log('Ah noo, thats the same hole!');
+      return randomHole(holes);
+    }
+    // Set varibale.
+    lastHole = hole;
+    // Return the hole.
+    return hole;
+  }
+
+  // Make mole peep.
+  function peep() {
+    const time = randomTime(200, 1000);
+    const hole = randomHole(holes);
+    hole.classList.add('up');
+    // After the time is up remove class. Keep going until game is over.
+    setTimeout(() => {
+      hole.classList.remove('up');
+      if (!timeUp) peep();
+    }, time);
+  }
+
+  // Start the game.
+  function startGame() {
+    // Reset scoreboard.
+    scoreBoard.textContent = 0;
+    // Reset game time.
+    timeUp = false;
+    // Reset score.
+    score = 0;
+    // Moles peeping.
+    peep();
+    // Keep the game going for 10 seconds.
+    setTimeout(() => timeUp = true, 10000);
+  }
+
+  // Hit the mole.
+  function bonk(e) {
+    if (!e.isTrusted) return // Cheating!
+    // Increase score.
+    score++;
+    // Remove class.
+    this.classList.remove('up');
+    // Update scoreboard.
+    scoreBoard.textContent = score;
+  }
+
+  // Listen for a click on each mole.
+  moles.forEach(mole => mole.addEventListener('click', bonk));
+</script>
+</body>
+</html>
