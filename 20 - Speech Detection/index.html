@@ -25,7 +25,7 @@
   // The browser looks for the 'result' event
   // So when that happens we create an array from the results
   // And convert them into strings
-  recognition.addEventListener('result', (e) => {
+  recognition.addEventListener('result', e => {
     const transcript = Array.from(e.results)
       .map(result => result[0])
       .map(result => result.transcript)
@@ -101,6 +101,5 @@
       border-color: transparent #efe4e4;
     }
   </style>
-
 </body>
 </html>
